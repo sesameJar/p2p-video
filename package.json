@@ -1,0 +1,26 @@
+{
+  "name": "p2p-video",
+  "version": "1.0.0",
+  "description": "Web-rtc",
+  "main": "index.js",
+  "dependencies": {
+    "budo": "^11.6.3",
+    "simple-peer": "^9.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "budo index.js:bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sesameJar/p2p-video.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sesameJar/p2p-video/issues"
+  },
+  "homepage": "https://github.com/sesameJar/p2p-video#readme"
+}

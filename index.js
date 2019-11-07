@@ -1,10 +1,7 @@
-navigator.webkitGetUserMedia({video : true, audio:false}, stream => {
-
 let Peer = require("simple-peer")
 var peer  = new Peer({
     initiator : location.hash === "#init",
-    trickle : false,
-    stream : stream
+    trickle : false
 })
 
 peer.on("signal", data => {
@@ -23,17 +20,4 @@ document.getElementById("send").addEventListener("click", event => {
 
 peer.on("data", data => {
     document.getElementById("messages").textContent += data + '\n'
-})
-
-peer.on("stream", stream => {
-    let mediaStream = new MediaStream(stream);
-    let video = document.createElement('video')
-    document.body.appendChild(video)
-
-    video.srcObject = mediaStream
-    video.play()
-})
-
-} , err => {
-    console.error(err)
 })
